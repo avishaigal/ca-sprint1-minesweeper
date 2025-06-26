@@ -7,15 +7,27 @@
 <body onload="onInit()">
     <h1>Minesweeper</h1>
     <div class="counters">
-        <span class="time">Time: 00</span>
-        <br/>
+        <span class="timer">Time: 00</span>
+        <span class="flags"></span>
+        <br />
         <span class="lives">Lives: </span>
+        <span class="smiley-btn" onclick="onInit()">😀</span>
+        <br />
     </div>
     <table>
         <tbody class="board"></tbody>
     </table>
 
-    <div class="modal"></div>
+    <div class="modal">
+        <h2 class="msg"></h2>
+        <button class="restart-btn" onclick="onInit()">New Game</button>
+    </div>
+    <div class="difficulty">
+        <button class="easy" onclick="setDifficulty(4,2)">easy</button>
+        <button class="medium" onclick="setDifficulty(8,14)">medium</button>
+        <button class="hard" onclick="setDifficulty(12,32)">hard</button>
+
+    </div>
     <div class="footer">Avishai Gal CaMay25</div>
 
 

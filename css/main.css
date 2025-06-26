@@ -9,35 +9,81 @@
 
 }
 
-/* .board {
+.flags {
+position: absolute;
+left: 40%;    
+padding: 5px;
+}
 
-} */
+.smiley-btn:hover {
+cursor: pointer;
+}
+
+.board {
+    position: absolute;
+    inset-inline-start: calc(50% - 60px);
+    inset-block-start: 30%;
+}
 
 .cell {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     text-align: center;
     border: 1px solid lightgray;
     border-radius: 3px;
-    background-color: grey;
+    background-color: rgb(87, 199, 111);
+}
+
+.cell:hover {
+    cursor: pointer;
+    background-color: pink;
+    transition: 0.7s;
 }
 
 .revealed {
     background-color: aliceblue;
 }
 
-.board:hover {
-    cursor: pointer;
-}
-
 .modal {
-    height: 200px;
-    width: 300px;
+    height: 90px;
+    width: 130px;
+    /* width: fit-content; */
     padding: 10px;
+    border: solid darkmagenta;
+    border-top: 0px;
+    border-left: 0px;
     border-radius: 7px;
     position: absolute;
+    inset-block-start: 30%;
+    inset-inline-start: calc(50% - 80px);
     text-align: center;
     background-color: darkolivegreen;
     color: whitesmoke;
+}
+
+.hidden {
     display: none;
+}
+
+button {
+    background-color: rgb(86, 170, 86);
+    color: whitesmoke;
+    border: solid darkmagenta;
+    border-top: 0px;
+    border-left: 0px;
+    border-radius: 3px;
+    transition: 1s;
+
+}
+
+button:hover {
+    cursor: pointer;
+    padding: 5px;
+    translate: -5px;
+}
+
+.footer {
+    position: absolute;
+    inset-inline-start: calc(50% - 60px);
+    inset-block-end: 10%;
 }

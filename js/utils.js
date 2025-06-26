@@ -1,7 +1,5 @@
 'use strict'
 
-// randoms
-
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('')
     var color = '#'
@@ -25,46 +23,4 @@ function drawNum() {
     const num = gNums[idx]
     gNums.splice(idx, 1)
     return num
-}
-
-// modal
-function showModal() {
-    const elModal = document.querySelector('.modal')
-    elModal.classList.remove('hidden')
-}
-
-function hideModal() {
-    const elModal = document.querySelector('.modal')
-    elModal.classList.add('hidden')
-}
-
-// text change
-function changeElText(selector, text) {
-    document.querySelector(selector).innerText = text
-}
-
-// sounds
-function playSound() {
-    const audio = new Audio('audio/drop.mp3')
-    audio.play()
-}
-
-// time
-function getTime() {
-    return new Date().toString().split(' ')[4]
-}
-
-function startTimer() {
-    gStartTime = Date.now()
-    gTimerInterval = setInterval(updateTimer, 25)
-    // console.log(' gTimerInterval:', gTimerInterval)
-}
-
-function updateTimer() {
-    
-    const now = Date.now()
-    //* Taking the difference between current time and start time
-    //* and converting to seconds
-    const diff = (now - gStartTime) / 1000
-    document.querySelector('.timer span').innerText = diff.toFixed(3)
 }
