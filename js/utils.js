@@ -1,26 +1,24 @@
-'use strict'
-
-function getRandomColor() {
-    var letters = '0123456789ABCDEF'.split('')
-    var color = '#'
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)]
-    }
-    return color
-}
-
-function generateRandId(length) {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    let id = ''
-    for (let i = 0; i < length; i++) {
-        id += chars.charAt(Math.floor(Math.random() * chars.length))
-    }
-    return id
-}
-
-function drawNum() {
-    const idx = getRandomInt(0, gNums.length)
-    const num = gNums[idx]
-    gNums.splice(idx, 1)
+function drawNum(array) {
+    const idx = getRandomInt(0, array.length)
+    const num = array[idx]
+    array.splice(idx, 1)
     return num
+}
+
+function getRandomInt(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
+}
+
+function showModal(msg) {
+    var elModal = document.querySelector('.modal h2').innerText = msg
+
+    elModal = document.querySelector('.modal')
+    elModal.classList.remove('hidden')
+}
+
+function hideModal() {
+    var elModal = document.querySelector('.modal')
+    elModal.classList.add('hidden')
 }

@@ -1,28 +1,79 @@
+.header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
 .counters {
-    height: 50px;
-    width: 80%;
-    padding: 5px;
+    height: 4em;
+    width: 80vw;
+    padding: 0.5em;
     margin: auto;
+    border: solid darkmagenta;
+    border-top: 0px;
+    border-left: 0px;
     border-radius: 3px;
-    background-color: black;
+    background-image: linear-gradient(to bottom right, rgb(9, 77, 9), rgb(35, 83, 116));
     color: white;
 
 }
 
 .flags {
-position: absolute;
-left: 40%;    
-padding: 5px;
+    position: absolute;
+    inset-inline-start: 40%;
+    inset-block-start: 8%;
+    padding: 0.3em;
+}
+
+.smiley-btn {
+    position: absolute;
+    inset-inline-start: 49%;
+    inset-block-start: 12%;
 }
 
 .smiley-btn:hover {
-cursor: pointer;
+    cursor: pointer;
+}
+
+.hints-div {
+    height: 2em;
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-color: rgb(12, 51, 24);
+    color: whitesmoke;
+    position: absolute;
+    inset-inline-end: 11%;
+    inset-block-start: calc(9% + 1.4em);
+}
+
+.hints-div:hover {
+    cursor: pointer;
+}
+
+.hints-pressed {
+    background-color: rgb(201, 201, 20) !important;
+    color: black !important;
+}
+
+.first-line-btns {
+    width: 60%;
+    margin-inline-start: 35%;
+}
+
+.second-line-btns {
+    width: 60%;
+    margin: auto;
+}
+
+.difficulty-btns {
+    inset-inline-start: 30%;
+    margin-inline-start: 20%;
 }
 
 .board {
     position: absolute;
-    inset-inline-start: calc(50% - 60px);
-    inset-block-start: 30%;
+    inset-block-start: 40%;
+    inset-inline-start: calc(50% - 10em)
 }
 
 .cell {
@@ -45,20 +96,23 @@ cursor: pointer;
 }
 
 .modal {
-    height: 90px;
-    width: 130px;
-    /* width: fit-content; */
-    padding: 10px;
+    height: 12%;
+    width: 12%;
+    padding: 1em;
     border: solid darkmagenta;
     border-top: 0px;
     border-left: 0px;
     border-radius: 7px;
     position: absolute;
     inset-block-start: 30%;
-    inset-inline-start: calc(50% - 80px);
+    inset-inline-start: calc(50% - 13em);
     text-align: center;
-    background-color: darkolivegreen;
+    background-color: rgb(29, 146, 107);
     color: whitesmoke;
+}
+
+.restart-btn {
+    margin: auto;
 }
 
 .hidden {
@@ -73,17 +127,77 @@ button {
     border-left: 0px;
     border-radius: 3px;
     transition: 1s;
-
+    margin-inline-start: 10%;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding: 0.5em
 }
 
 button:hover {
     cursor: pointer;
-    padding: 5px;
-    translate: -5px;
+    padding: 0.7em;
+    translate: -0.7em;
 }
 
 .footer {
     position: absolute;
-    inset-inline-start: calc(50% - 60px);
+    inset-inline-start: calc(50% - 6em);
     inset-block-end: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+}
+
+.hit-mine {
+    background-color: red;
+}
+
+.best-score {
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9em;
+    margin-block-start: 0.5em;
+    margin-inline-start: 9%;
+    color: white;
+}
+
+.safe-click {
+    background-color: rgb(55, 147, 252);
+    color: whitesmoke;
+    border: solid darkmagenta;
+    border-top: 0px;
+    border-left: 0px;
+    border-radius: 3px;
+    transition: 1s;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.no-more {
+    background-color: rgb(161, 161, 161);
+    color: rgb(190, 190, 190);
+    text-decoration: line-through;
+}
+
+.dark-mode-btn {
+    background-color: black;
+    color: whitesmoke;
+    border: solid darkmagenta;
+    border-top: 0px;
+    border-left: 0px;
+    border-radius: 3px;
+    transition: 1s;
+}
+
+.dark {
+    background-image: linear-gradient(to bottom right, rgb(12, 97, 12), rgb(54, 148, 177));
+}
+
+.light {
+    background-image: linear-gradient(to bottom right, rgb(129, 202, 129), rgb(54, 148, 177));
+    color: whitesmoke;
 }

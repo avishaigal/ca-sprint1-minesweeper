@@ -4,16 +4,28 @@
     <link rel="stylesheet" href="css/main.css">
 </header>
 
-<body onload="onInit()">
-    <h1>Minesweeper</h1>
-    <div class="counters">
-        <span class="timer">Time: 00</span>
-        <span class="flags"></span>
-        <br />
-        <span class="lives">Lives: </span>
-        <span class="smiley-btn" onclick="onInit()">😀</span>
-        <br />
+<body class="grad light" onload="onInit()">
+    <h1 class="header">Minesweeper</h1>
+    <div>
+        <div class="counters">
+            <span class="lives">Lives: </span>
+            <span class="flags"></span>
+            <br />
+            <br />
+            <span class="timer">Time: 00</span>
+            <span class="smiley-btn" onclick="onInit()">😀</span>
+            <br />
+        </div>
+        <div class="best-score"></div>
+
+        <div class="hints-div" onclick="pressHint()"></div>
+        <div class="first-line-btns">
+            <button class="safe-click" onclick="useSafeClick()">Safe Click</button>
+            <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
+        </div>
     </div>
+    <div class="second-line-btns"></div>
+
     <table>
         <tbody class="board"></tbody>
     </table>
@@ -22,14 +34,7 @@
         <h2 class="msg"></h2>
         <button class="restart-btn" onclick="onInit()">New Game</button>
     </div>
-    <div class="difficulty">
-        <button class="easy" onclick="setDifficulty(4,2)">easy</button>
-        <button class="medium" onclick="setDifficulty(8,14)">medium</button>
-        <button class="hard" onclick="setDifficulty(12,32)">hard</button>
-
-    </div>
     <div class="footer">Avishai Gal CaMay25</div>
-
 
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
